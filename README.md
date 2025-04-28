@@ -13,10 +13,11 @@ Requirements:
 
 1) Python >= 3.x 
 2) Required libraries:
-   tkinter (included with Python I believe)
-   pyautogui
-   keyboard
-   mouse
+   1) tkinter (included with Python I believe)
+   2) pyautogui
+   3) keyboard
+   4) mouse
+      
 for dumb asses open cmd and type "pip install pyautogui keyboard mouse" (quotation marks not included) and press enter 
 
 Screen-shots (Cool fucking stuff):
@@ -31,9 +32,23 @@ MIT License:
   Feel free to modify or use it and do whatever the fuck you want with it 
 
 PratGod Signature:
+
+
+
   ![image](https://github.com/user-attachments/assets/0b5fa846-5232-452c-8037-c76ade2a3dd2)
 
-lol btw cp out of all the people lost his undefeated status to fucking Ian Garry, My day is ruined so is my wallet fuck you ian garry
+
+
+
+
+
+
+
+
+
+
+
+lol btw cp(carlos prates) out of all the people lost his undefeated status to fucking Ian Garry, My day is ruined so is my wallet fuck you ian garry
 
 
 
