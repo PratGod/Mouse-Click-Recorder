@@ -129,7 +129,7 @@ class ClickRecorder:
 
         def run_clicks():
             for i, (x, y, click_type, delay) in enumerate(self.clicks):
-                if not self.running:  # Stop playback if interrupted
+                if not self.running:  # Stop playback if interrupted just for safety
                     break
 
                 self.click_listbox.selection_clear(0, tk.END)
@@ -144,7 +144,7 @@ class ClickRecorder:
                     pyautogui.doubleClick(x, y)
 
             self.click_listbox.selection_clear(0, tk.END)
-            self.running = False  # Ensure flag resets after playback
+            self.running = False
 
         threading.Thread(target=run_clicks, daemon=True).start()
 
@@ -158,14 +158,14 @@ class ClickRecorder:
 
         for idx, (x, y, _, _) in enumerate(self.clicks):
             overlay = tk.Toplevel(self.root)
-            overlay.overrideredirect(True)  # No window decorations
+            overlay.overrideredirect(True)  # No window decorations just for aesthetics 
             overlay.geometry(f"30x30+{x-15}+{y-15}")  # Small circle size
             overlay.wm_attributes("-topmost", True)
-            overlay.wm_attributes("-alpha", 0.5)  # Semi-transparent
+            overlay.wm_attributes("-alpha", 0.5)  # Semi-transparent for game cheat compatibility 
 
             canvas = tk.Canvas(overlay, width=30, height=30, bg="red", highlightthickness=0)
             canvas.pack()
-            canvas.create_oval(5, 5, 25, 25, fill="yellow")  # Draw circle
+            canvas.create_oval(5, 5, 25, 25, fill="yellow")
             canvas.create_text(15, 15, text=str(idx+1), font=("Arial", 12, "bold"), fill="black")  # Numbering
 
             self.overlays.append(overlay)
